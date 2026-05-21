@@ -1,0 +1,15 @@
+# Build artifacts
+GTFO_SuperFlashlight/bin/
+GTFO_SuperFlashlight/obj/
+*.bak
+*.lscache
+
+# Active plugin DLL in root (build output — not for repo)
+/FlashlightOverhaul.dll
+
+# Backup snapshots
+Backup*/
+Backup.zip
+
+# Claude Code
+.claude/

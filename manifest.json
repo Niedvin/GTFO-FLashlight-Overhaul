@@ -1,0 +1,10 @@
+{
+  "name": "Flashlight Overhaul",
+  "author": "Niedvin",
+  "version_number": "1.2.0",
+  "website_url": "",
+  "description": "Soft-edge flashlight using a three-layer light sandwich. All intensities, ranges and angles are configurable.",
+  "dependencies": [
+    "BepInEx-BepInExPack_GTFO-3.2.2"
+  ]
+}

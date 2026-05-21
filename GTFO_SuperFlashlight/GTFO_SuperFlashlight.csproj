@@ -1,0 +1,88 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>FlashlightOverhaul</AssemblyName>
+    <Description>Realistic soft-edge flashlight for GTFO using light sandwich technique</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>GTFO_SuperFlashlight</RootNamespace>
+    <!-- Build outside the BepInEx plugins folder so BepInEx doesn't pick up stale copies -->
+    <BaseOutputPath>$(LOCALAPPDATA)\GTFO_SuperFlashlight\bin\</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- BepInEx core (v6 only — do NOT also reference BepInEx.dll which is v5) -->
+    <Reference Include="BepInEx.Core">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\core\BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\core\BepInEx.Unity.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Harmony -->
+    <Reference Include="0Harmony">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- IL2CPP Interop Runtime -->
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\core\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- IL2CPP mscorlib — needed because Unity IL2CPP types derive from it -->
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Unity Engine -->
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <Reference Include="GameData-ASM">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\GameData-ASM.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assets-ASM">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\Assets-ASM.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- GTFO game assemblies: Gear.GearManager + GameData.FlashlightSettingsDataBlock -->
+    <Reference Include="Modules-ASM">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\Modules-ASM.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="GlobalFramework-ASM">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\GlobalFramework-ASM.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Utils-ASM">
+      <HintPath>G:\SteamLibrary\steamapps\common\GTFO\BepInEx\interop\Utils-ASM.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
