@@ -1,7 +1,0 @@
-<Project>
-  <!-- MSBuild reads this file BEFORE Microsoft.Common.props, so BaseIntermediateOutputPath
-       is set early enough to avoid warning MSB3539. Do not move this into the .csproj. -->
-  <PropertyGroup>
-    <BaseIntermediateOutputPath>$(LOCALAPPDATA)\GTFO_SuperFlashlight\obj\</BaseIntermediateOutputPath>
-  </PropertyGroup>
-</Project>
